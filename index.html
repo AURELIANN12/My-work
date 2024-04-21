@@ -1,52 +1,23 @@
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <!-- link to css file -->
-    <link rel="stylesheet" href="calculator.css">
+    <title>Weather</title>
+    <!-- //linl to the css file -->
+    <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-    <div id="calculator">
-        <!-- input box -->
-        <input id="display" readonly>
-        <!-- buttons for the calculator -->
-        <div id="keys">
-            <button onclick="appendToDisplay('+')" onmousedown="playClickSound()" class="operator-btn">+</button>
-              <button onclick="appendToDisplay('7')" onmousedown="playClickSound()" >7</button>
-            <button onclick="appendToDisplay('8')" onmousedown="playClickSound()" >8</button>
-              <button onclick="appendToDisplay('9')" onmousedown="playClickSound()"  >9</button>
-            <button onclick="appendToDisplay('-')"onmousedown="playClickSound()"  class="operator-btn">-</button>
-              <button onclick="appendToDisplay('4')" onmousedown="playClickSound()" >4</button>
-            <button onclick="appendToDisplay('5')" onmousedown="playClickSound()" >5</button>
-              <button onclick="appendToDisplay('6')" onmousedown="playClickSound()" >6</button>
-            <button onclick="appendToDisplay('*')"  onmousedown="playClickSound()" class="operator-btn">*</button>
-              <button onclick="appendToDisplay('1')" onmousedown="playClickSound()" >1</button>
-            <button onclick="appendToDisplay('2')" onmousedown="playClickSound()" >2</button>
-              <button onclick="appendToDisplay('3')" onmousedown="playClickSound()" >3</button>
-            <button onclick="appendToDisplay('/')"  onmousedown="playClickSound()" class="operator-btn">/</button>
-              <button onclick="appendToDisplay('0')" onmousedown="playClickSound()" >0</button>
-            <button onclick="appendToDisplay('.')" onmousedown="playClickSound()" >.</button>
-              <button onclick="appendToDisplay('-')" onmousedown="playClickSound()" class="exponent" >+/-</button>
-            <button onclick="clearDisplay()" onmousedown="playClickSound()" class="operator-btn" >c</button>
-              <button onclick='appendToDisplay("(")' onmousedown="playClickSound()"> ( </button>
-            <button onclick='appendToDisplay("(")' onmousedown="playClickSound()"> ) </button>
-              <button onclick="calculate()"class="operator-btn" >=</button>
-
-        </div>
+<!-- form for inputing the city and submit button -->
+    <form class="weatherForm">
+        <input type="text" class="cityInput" placeholder="Enter city">
+        <button type="submit">Get Weather</button>
+    </form>
+ <!-- Placeholder for displaying weather information, initially hidden -->
+    <div class="card" style="display: none">
     </div>
-<!-- link to javascript file -->
-    <script src="calculator.js"></script>
-    <script>
-        // JS code for sound when click on buttons
-        let audio = new Audio();
-        audio.src = "sound1.wav";
-        
-        function playClickSound() {
-            audio.play();
-        }
-    </script>
+ <!-- link to the javascript file -->
+    <script src="weather.js"></script>
 </body>
 </html>
